@@ -1,0 +1,423 @@
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle,rgba(242, 242, 242, 1) 0%, rgba(180, 193, 212, 1) 32%, rgba(185, 189, 196, 1) 52%, rgba(194, 214, 237, 1) 81%, rgba(148, 187, 233, 1) 100%);
+      color: white;
+      min-height: 100vh;
+      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+ .container-navbar{
+    justify-content: center;
+    align-items: center;
+    align-content:center;
+    display: flex;
+ }
+    /* --- CSS DEL NAVBAR (Actualizado y Meojrado) --- */
+  .navbar-container {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Fondo oscuro y forma de cápsula principal */
+    background: rgba(48, 41, 56, 0.9); /* Un tono oscuro violáceo-marrón, similar a la referencia */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* Sombra suave */
+    backdrop-filter: blur(5px); /* Opcional: ligero desenfoque de fondo */
+    padding: 8px; /* Espaciado interno general */
+    border-radius: 99px; /* Forma de cápsula perfecta */
+    width: max-content; /* Se ajusta al contenido */
+
+  }
+
+  .nav-buttons {
+    margin: 0px 10px;
+    display: flex;
+    gap: 12px; /* Espacio entre los botones */
+  }
+
+  /* Estilos base para todos los botones */
+  .nav-buttons button, 
+  .nav-buttons a {
+    text-decoration: none; /* Si usas enlaces <a> */
+    border: none;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 42px; /* Altura uniforme */
+    transition: all 0.2s ease;
+  }
+
+  /* --- BOTÓN 1: "Work" (Con fondo atenuado) --- */
+  .btn-work {
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo blanco muy transparente */
+    color: rgba(255, 255, 255, 0.85); /* Texto blanco algo atenuado */
+    border-radius: 99px; /* Cápsula */
+    padding: 0 24px;
+  }
+
+  .btn-work:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Se aclara ligeramente al pasar el ratón */
+  }
+
+  /* --- BOTÓN 3: "Say Hello" (La "Gema" con borde degradado) --- */
+  .btn-say-hello-wrapper {
+    /* Este contenedor crea el efecto de borde degradado */
+    margin: 0px 10px;
+    position: relative;
+    padding: 2px; /* Grosor del borde */
+    border-radius: 99px; /* Cápsula */
+    background: linear-gradient(135deg, #00fff2, #ff00c8, #ffcc00); /* El degradado de arcoíris */
+    display: flex;
+  }
+
+  .btn-say-hello {
+    /* El botón real dentro del borde */
+    background-color: rgb(48, 41, 56); /* Coincide con el color del navbar para simular el borde */
+    color: #ffffff;
+    border: none;
+    border-radius: 97px; /* Un poco menos que el contenedor para encajar */
+    padding: 0 24px;
+    height: 42px; /* Asegura la misma altura */
+    width: 100%;
+    position: relative;
+    z-index: 1; /* Por encima del degradado */
+  }
+
+  /* Efecto de brillo opcional para "Say Hello" */
+  .btn-say-hello-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    border-radius: 99px;
+    background: inherit;
+    filter: blur(10px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+  }
+
+  .btn-say-hello-wrapper:hover::after {
+    opacity: 0.6; /* Brillo activado */
+  }
+
+    /* CONTENEDOR */
+    .container {
+      padding: 10px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .input-box {
+      margin-bottom: 20px;
+    }
+
+    .input-box input {
+      width: 100%;
+      padding: 12px;
+      border-radius: 10px;
+      border: none;
+      font-size: 16px;
+    }
+
+    /* GRID */
+    #fontsContainer {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    @media (max-width: 600px) {
+      #fontsContainer {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* TARJETAS */
+    .font-preview {
+      background: rgba(12, 12, 12, 0.521);
+      padding: 15px;
+      border-radius: 15px;
+      position: relative;
+    }
+
+    .font-name {
+      font-size: 14px;
+      opacity: 0.7;
+      margin-bottom: 10px;
+    }
+
+    .preview-text {
+      font-size: 34px;
+      text-align: center;
+    }
+
+    /* 👁️ BOTÓN OJO */
+    .eye-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      font-size: 18px;
+      background: rgba(0,0,0,0.4);
+      padding: 5px 8px;
+      border-radius: 8px;
+      transition: 0.2s;
+    }
+
+    .eye-btn:hover {
+      background: rgba(0,0,0,0.7);
+    }
+
+    /* 🔥 MODAL */
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(12, 12, 12, 0.521);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .modal-content {
+      background: #111;
+      padding: 40px;
+      border-radius: 15px;
+      text-align: center;
+      max-width: 80%;
+    }
+
+    .modal-text {
+      font-size: 80px;
+    }
+
+    .close-btn {
+      margin-top: 15px;
+      padding: 10px 20px;
+      border: none;
+      background: #00a8ff;
+      color: white;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+        .close-btn:hover {
+      background: rgba(136, 211, 255, 0.753);
+    }
+
+
+    /* ===== CARRUSEL ===== */
+.carousel {
+  width: 1200px;
+  height: 300px;
+  margin: auto;
+  overflow: hidden;
+  background: black; /* importante para los espacios */
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 2s ease-in-out;
+   min-width: 90%;
+}
+
+.carousel img {
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+  display: block;
+}
+.carousel-buttons {
+  position: absolute;
+  width:max-content;
+  top: 25%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.carousel-buttons button {
+  background: rgba(245, 245, 245, 0.644);
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+/* ===== SECCIÓN INFORMACION ===== */
+.neon-info {
+  max-width: 1500px;
+  margin: 20px auto;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.589);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* Sombra suave */
+  border-radius: 15px;
+  line-height: 1.7;
+  color: #000000;
+  text-align: justify;
+}
+
+.neon-info h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.neon-info h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #000000;
+  text-align: justify;
+}
+
+.neon-info ul {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+/* CONTENEDOR GENERAL */
+.neon-tech-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  max-width: 1500px;
+  margin: 20px auto;
+  padding: 20px;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.589);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* Sombra suave */
+  border-radius: 15px;
+  line-height: 1.7;
+  color: #000000;
+  text-align: justify;
+}
+
+/* IMAGEN */
+.neon-tech-img img {
+  width: 100%;
+  height: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/* TEXTO */
+.neon-tech-info {
+  background: rgba(255,255,255,0.05);
+  padding: 25px;
+  border-radius: 15px;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+.neon-tech-info h3 {
+  margin-bottom: 15px;
+  color: #000000;
+  text-align: center;
+}
+
+.neon-tech-info p {
+  margin-bottom: 10px;
+  opacity: 0.9;
+  text-align: justify;
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 768px) {
+  .neon-tech-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ===== SECCIÓN CONÓCENOS ===== */
+.about {
+  max-width: 1500px;
+  margin: 20px auto;
+  text-align: justify;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.589);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* Sombra suave */
+  border-radius: 15px;
+  line-height: 1.7;
+  color: #000000;
+}
+
+.about h2 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.about p {
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+  /* MAPA CONTENEDOR GENERAL */
+.map-container {
+   background: rgba(255, 255, 255, 0.589);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* Sombra suave */
+  border-radius: 15px;
+  line-height: 1.7;
+  color: #000000;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  max-width: 1500px;
+  margin: 20px auto;
+  align-items: center;
+  padding: 20px;
+}
+
+/* TEXTO */
+.map-info {
+  background: rgba(255, 255, 255, 0.199);
+  padding: 25px;
+  border-radius: 15px;
+}
+
+.map-info h2 {
+  margin-bottom: 15px;
+}
+
+.map-info p {
+  margin-bottom: 10px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.map-info ul {
+  margin: 10px 0 15px 20px;
+}
+
+.map-info li {
+  margin-bottom: 5px;
+}
+
+/* MAPA */
+.map-box {
+  width: 100%;
+}
+
+#map {
+  width: 100%;
+  height: 500px;
+  border-radius: 18px;
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 768px) {
+  .map-container {
+    grid-template-columns: 1fr;
+  }
+}

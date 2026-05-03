@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/Logo2.png" type="image/png">
+
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+  <title>Letreros NEON</title>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="container-navbar">
+  <div class="navbar-container">
+    <div class="btn-say-hello-wrapper">
+      <button class="btn-say-hello">Inicio</button>
+    </div>
+
+    <div class="nav-buttons">
+      <button class="btn-work" onclick="gogallery()">Galeria de fotos</button>
+      <button class="btn-work" onclick="gocontact()">Contactanos</button>
+      <button class="btn-work" onclick="gocontact()">Catalogo</button>
+      <button class="btn-work" onclick="gotxtselector()">Selector de Tipografias</button>
+    </div>
+  </div>
+</div>
+
+<!-- 🎞️ CARRUSEL -->
+<div class="carousel">
+  <div class="carousel-track" id="carouselTrack">
+    <img src="images/carrousel_catalogo.jpg" alt="Neón 3" onclick="gocatalogo()" style="cursor:pointer;">
+    <img src="images/carrousel_gallery.jpg" alt="Neón 1" onclick="gogallery()" style="cursor:pointer;">
+    <img src="images/carrousel_contact.jpg" alt="Neón 2" onclick="gocontact()" style="cursor:pointer;">
+    <img src="images/carrousel_textselector.jpg" alt="Neón 3" onclick="gotxtselector()" style="cursor:pointer;">
+    </div>
+</div>
+<!-- 💡 SECCIÓN INFORMACIÓN -->
+<div class="neon-info">
+
+  <h2>Convertimos tus ideas en luz</h2>
+
+  <p>
+    En nuestro taller transformamos ideas en piezas visuales únicas que no solo iluminan espacios, sino que crean 
+    experiencias. Cada letrero neón que fabricamos está pensado para destacar, llamar la atención y transmitir 
+    emociones, ya sea en un evento especial, en tu negocio o en un rincón personal que quieras hacer inolvidable.
+  </p>
+
+  <p>
+    No se trata solo de un producto decorativo, sino de una forma moderna y elegante de comunicar, de darle identidad 
+    a un espacio y de crear un punto visual que realmente conecte con las personas.
+  </p>
+
+  <p>
+    A diferencia del neón clásico de vidrio, nuestras tiras son flexibles, resistentes y seguras al tacto, lo que las 
+    hace ideales para hogares, eventos y negocios sin preocuparte por fragilidad o riesgos.
+  </p>
+  </div>
+  <div class="neon-tech-container">
+
+  <!-- 🖼️ IMAGEN -->
+  <div class="neon-tech-img">
+    <img src="images/IMG_4418.jpg" alt="Tiras neón LED Genxing">
+  </div>
+
+  <!-- 📝 TEXTO -->
+  <div class="neon-tech-info">
+    <h3>🔆 Tecnología de tiras neón LED</h3>
+    <p>
+      Trabajamos con tiras neón LED de alta calidad, utilizando la marca Genxing, reconocida por su excelente rendimiento, 
+      intensidad de luz uniforme y gran durabilidad. Este tipo de tecnología nos permite ofrecer un acabado tipo neón 
+      tradicional, pero con todas las ventajas actuales: menor consumo energético, mayor seguridad y una vida útil mucho más larga.
+    </p>
+
+    <p>
+      A diferencia del neón convencional, nuestras tiras LED son flexibles, resistentes y seguras, lo que permite crear 
+      diseños más complejos sin comprometer la calidad ni la estética del resultado final.
+    </p>
+  </div>
+
+</div>
+<div class="neon-tech-container">
+  <!-- 📝 TEXTO -->
+  <div class="neon-tech-info">
+    <h3>🧩 Base de acrílico de alta calidad</h3>
+    <p>
+      Cada diseño se monta cuidadosamente sobre una base de acrílico, logrando un acabado limpio, moderno y profesional. 
+      Este material no solo aporta estética, sino también firmeza y durabilidad, permitiendo que tu letrero conserve su forma 
+      y presencia con el paso del tiempo.
+    </p>
+
+    <p>
+      Además, el acrílico puede adaptarse a diferentes estilos: transparente para un look minimalista o con formas personalizadas 
+      para reforzar el diseño y hacerlo aún más atractivo.
+    </p>
+  </div>
+
+  <!-- 🖼️ IMAGEN -->
+  <div class="neon-tech-img">
+    <img src="images/54e34652-de88-453d-9902-367d073fc603.jpg" alt="Base de acrílico para letreros neón">
+  </div>
+
+</div>
+<div class="neon-info">
+  <h3>🎨 Diseño totalmente personalizado</h3>
+  <p>
+    Sabemos que cada cliente busca algo único, por eso trabajamos contigo desde la idea inicial hasta el resultado final. 
+    Puedes elegir frases, nombres, logotipos o cualquier concepto que tengas en mente. Ajustamos tipografías, colores, tamaños 
+    y estilos para que el resultado refleje exactamente lo que deseas.
+  </p>
+
+  <p>
+    Nuestro objetivo es que cada pieza sea exclusiva, diseñada para representar tu personalidad, tu marca o ese momento especial 
+    que quieres destacar.
+  </p>
+
+  <h3>✨ ¿Cuándo usar un letrero neón?</h3>
+  <p>
+    Los letreros neón son extremadamente versátiles y se adaptan a distintas situaciones donde buscas impacto visual y estilo:
+  </p>
+
+  <ul>
+    <li>Eventos especiales como cumpleaños, bodas y aniversarios</li>
+    <li>Decoración de habitaciones, estudios o espacios personales</li>
+    <li>Negocios, vitrinas, cafeterías o locales que buscan atraer clientes</li>
+    <li>Creación de contenido para redes sociales o sesiones fotográficas</li>
+    <li>Regalos personalizados con un alto valor emocional</li>
+  </ul>
+
+  <p>
+    Un letrero neón no pasa desapercibido. Es una pieza que ilumina, decora y comunica al mismo tiempo, convirtiéndose 
+    en el centro de atención en cualquier lugar donde se coloque.
+  </p>
+  <p>
+    Si buscas algo diferente, moderno y con personalidad, un diseño neón es la elección perfecta.
+  </p>
+    </div>
+</div>
+<!-- 💡 CONÓCENOS -->
+<div class="about">
+  <h2>Conócenos</h2>
+  <p>
+    Creamos letreros neón personalizados que transforman espacios y momentos en experiencias únicas. 
+    Cada diseño está pensado para destacar, ya sea para eventos, negocios o detalles especiales.
+    Nos enfocamos en calidad, estilo y creatividad para ofrecerte algo verdaderamente diferente.
+  </p>
+</div>
+<!-- 📍 MAPA -->
+<div class="map-container">
+  <div class="map-info">
+    <h2> Entregas y cobertura</h2>
+    <p>
+      Realizamos entregas en distintos puntos donde normalmente trabajamos con clientes.
+      Entregamos personalmente en:
+    </p>
+    <ul>
+      <li>Jiquipilco centro</li>
+      <li>Santa Cruz Tepexpan</li>
+      <li>Ixtlahuaca centro</li>
+      <li>Jocotitlán</li>
+      <li>San Pedro de los Baños</li>
+      <li>San Bartolo del Llano</li>
+      <li>Santa María del Llano</li>
+      <li>Los reyes</li>
+      <li>Granjas</li>
+      <li>San Joaquin la cabecera</li>
+    </ul>
+
+    <p>
+      También realizamos entregas en Atlacomulco y Toluca con un costo extra de $120.
+      Podemos coordinar el punto de entrega que sea más cómodo para ti.
+    </p>
+  </div>
+
+  <div class="map-box">
+    <div id="map"></div>
+  </div>
+
+</div>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script>
+/* 🎞️ CARRUSEL */
+let index = 0;
+const track = document.getElementById("carouselTrack");
+const slides = track.children;
+
+function updateCarousel() {
+  track.style.transform = `translateX(-${index * 100}%)`;
+}
+
+function nextSlide() {
+  index = (index + 1) % slides.length;
+  updateCarousel();
+}
+
+function prevSlide() {
+  index = (index - 1 + slides.length) % slides.length;
+  updateCarousel();
+}
+
+setInterval(nextSlide, 4000);
+
+/* 📍 MAPA */
+const map = L.map('map').setView([19.575031, -99.717522], 10);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; OpenStreetMap contributors'
+}).addTo(map);
+
+const ubicaciones = [
+  { lat: 19.577001, lng: -99.709265, titulo: "Sucursal principal" },
+  { lat: 19.557675, lng: -99.608143, titulo: "Jiquipilco centro" },
+  { lat: 19.569034, lng: -99.704995, titulo: "Santa Cruz Tepexpan" },
+  { lat: 19.569280, lng: -99.767201, titulo: "Ixtlahuaca centro" },
+  { lat: 19.710382, lng: -99.786002, titulo: "Jocotitlán" },
+  { lat: 19.669414, lng: -99.835319, titulo: "San Pedro de los Baños" },
+  { lat: 19.590337, lng: -99.741175, titulo: "San Bartolo del Llano" },
+  { lat: 19.639430, lng: -99.727464, titulo: "Santa María del Llano" },
+  { lat: 19.680444, lng: -99.760036, titulo: "Los reyes" },
+  { lat: 19.571952, lng: -99.666185, titulo: "Granjas" },
+  { lat: 19.554511, lng: -99.748904, titulo: "San Joaquin la cabecera" }
+];
+
+ubicaciones.forEach(lugar => {
+  L.marker([lugar.lat, lugar.lng])
+    .addTo(map)
+    .bindPopup(`<strong>${lugar.titulo}</strong>`);
+});
+
+/* 🔘 NAVEGACIÓN */
+function gotxtselector() {
+  window.location.href = "text_selector/tex_selector.html";
+}
+
+function gogallery() {
+  window.location.href = "galeria.html";
+}
+
+function gocontact() {
+  window.location.href = "contacto.html";
+}
+</script>
+
+</body>
+</html>
