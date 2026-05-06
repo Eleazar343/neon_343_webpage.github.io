@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" href="images/Logo2.png" type="image/png">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <title>Contáctame</title>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="container-navbar">
+  <div class="navbar-container">
+
+    <div class="nav-left">
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </div>
+
+    <div class="nav-center">
+      <div class="btn-say-hello-wrapper">
+        <button class="btn-say-hello">Contacto</button>
+      </div>
+    </div>
+
+    <div class="nav-buttons" id="navMenu">
+      <button class="btn-work" onclick="gohome()">Inicio</button>
+      <button class="btn-work" onclick="gogallery()">Galeria</button>
+      <button class="btn-work" onclick="gocatalogo()">Catalogo</button>
+      <button class="btn-work" onclick="gotxtselector()">Tipografias</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- SECCIÓN CONTACTO -->
+ <h2 style="text-align:center;">📲 Contáctame</h2>
+<div class="contact-container">
+  <div class="contact-wrapper">
+
+    <!-- IZQUIERDA: BOTONES -->
+    <div class="contact-left">
+      <p>
+        ¿Tienes una idea o quieres cotizar tu letrero neón?
+      </p>
+      <p>
+        Escríbeme directamente por cualquiera de estos medios:
+      </p>
+
+      <div class="contact-options">
+        
+<!-- WHATSAPP -->
+<a href="https://wa.me/5217121513453?text=Hola,%20quiero%20información%20sobre%20un%20letrero%20neón"
+   target="_blank" class="contact-card whatsapp">
+  <i class="fa-brands fa-whatsapp"></i>
+  WhatsApp
+</a>
+<!-- INSTAGRAM -->
+<a href="https://www.facebook.com/share/1GMCgWHZ3n/?mibextid=wwXIfr" target="_blank" class="contact-card instagram">
+  <i class="fa-brands fa-instagram"></i>
+  Instagram
+</a>
+<a href="https://www.facebook.com/eleazargp343/" target="_blank" class="contact-card Facebook">
+  <i class="fa-brands fa-facebook-f"></i>
+  Facebook
+</a>
+<a href="https://mail.google.com/mail/?view=cm&fs=1&to=eleazargarcia930@gmail.com&su=Cotización%20Letrero%20Neón"
+   target="_blank" class="contact-card email">
+  <i class="fa-solid fa-envelope"></i>
+  Gmail
+</a>
+      </div>
+    </div>
+    <!-- DERECHA: INFORMACIÓN -->
+    <div class="contact-right">
+
+      <h3>Información de contacto</h3>
+
+      <p style="margin:12px;"><strong>Nombre:</strong> Eleazar García Pérez</p>
+      <p style="margin:12px;"><strong>Teléfono:</strong> 7121513453</p>
+      <p style="margin:12px;"><strong>Correo:</strong> eleazargarcia930@gmail.com</p>
+      <p style="margin:12px;"><strong>Ubicación:</strong> Carretera Ixtlahuaca–Jiquipilco Km 6, Santa Cruz Tepexpan, C.P. 50830, Jiquipilco, Estado de México, México.</p>
+
+      <p style="margin-top:15px;">
+        Atención personalizada para cotizaciones, dudas o diseños especiales.  
+        Respondo lo más rápido posible.
+      </p>
+
+    </div>
+
+  </div>
+</div>
+<!-- MAPA -->
+<div class="map-container">
+
+<div class="map-info">
+  <h2 style="text-align: center;">📍 Visítanos</h2>
+
+  <p>
+    Estamos listos para ayudarte a hacer realidad tu idea.  
+    Puedes visitarnos directamente o coordinar la entrega de tu letrero neón desde nuestra sucursal principal.
+  </p>
+
+  <p>
+    Será un gusto atenderte y asesorarte para crear un diseño único que realmente destaque.
+  </p>
+
+  <ul>
+    <li>📌 Santa Cruz Tepexpan</li>
+    <li>📌 Jiquipilco, Estado de México</li>
+  </ul>
+
+  <p style="margin-top:10px; text-align: center;">
+    💡 Agenda tu visita o llega fácilmente con ayuda del mapa.
+  </p>
+
+  <!-- BOTÓN -->
+  <a href="https://www.google.com/maps/dir/?api=1&destination=19.577001,-99.709265"
+     target="_blank"
+     class="btn-maps">
+     📍 ¿Cómo llegar?
+  </a>
+</div>
+
+  <div class="map-box">
+    <div id="map"></div>
+  </div>
+
+</div>
+
+<!-- JS -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script>
+/* ===== NAVBAR ===== */
+function toggleMenu() {
+  const menu = document.getElementById("navMenu");
+  menu.classList.toggle("active");
+}
+
+document.addEventListener("click", function(e) {
+  const menu = document.getElementById("navMenu");
+  const toggle = document.querySelector(".menu-toggle");
+
+  if (!menu.contains(e.target) && !toggle.contains(e.target)) {
+    menu.classList.remove("active");
+  }
+});
+
+/* ===== MAPA (SOLO 1 UBICACIÓN) ===== */
+const map = L.map('map').setView([19.577001, -99.709265], 13);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; OpenStreetMap contributors'
+}).addTo(map);
+
+L.marker([19.577001, -99.709265])
+  .addTo(map)
+  .bindPopup("<strong>Sucursal principal</strong>")
+  .openPopup();
+
+/* ===== NAVEGACIÓN ===== */
+function gohome() {
+  window.location.href = "index.html";
+}
+
+function gogallery() {
+  window.location.href = "galeria.html";
+}
+
+function gocatalogo() {
+  window.location.href = "catalogo.html";
+}
+
+function gotxtselector() {
+  window.location.href = "text_selector/tex_selector.html";
+}
+</script>
+
+</body>
+</html>
